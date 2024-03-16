@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordings</title>
+    <link rel="stylesheet" href="recordings.css">
+    <script src="script.js"></script>
+    
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body onload="initClock()">
+    <div class="sidebar">
+        <div class="dash-board">
+            <i class='bx bx-home'></i>
+            <a href="#" class="bold">Dashboard</a>
+        </div>
+        <div class="profile">
+            <i class='bx bxs-user-rectangle'></i>
+            <a href="#" class="bold">Profile</a>
+        </div><br>
+        <div class="chat">
+            <i class='bx bxs-chat'></i>
+            <a href="#" class="bold">Chat</a>
+        </div>
+        <div class="Sidebar">
+            <div class="help">
+                <i class='bx bx-help-circle'></i>
+                <a href="#" class="bold">Help</a>
+            </div><br>
+            <div class="logout">
+                <i class='bx bx-log-out'></i>
+                <a href="#" class="bold">Logout</a>
+            </div>
+        </div>
+    </div>
+        
+    <div class="header">
+            <div class="container">
+                <div class="input-box">
+                    <input type="text" placeholder="search..." required>
+                    <j class='bx bx-search'></j>
+                </div>
+            </div>
+    </div>
+
+    <!-- digital clock start-->
+    <div class="datetime">
+        <div class="date">
+            <span id="dayname">Day</span>,
+            <span id="month">Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+        </div>
+        <div class="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>
+        </div>
+    </div>
+    <div class="input-box">
+        <i class='bx bxs-bell'></i>
+    </div>
+
+    <div class="clinician">
+        <img src="Ellipse17.png" alt="therapist" class="Ellipse17">
+    </div>
+    <nav class="patients">
+        <ul>
+                <li><a href="">Patients Name</a>
+                    <ul id="submenu">
+                        <li><a href="">Recordings</a></li>
+                    </ul>
+                </li>
+            
+       </ul>
+    </nav>
+
+    <div class="grid-container">
+        <main class="main-container">
+
+        
+           
+           <div class="wrapper">
+                <label><b>RECORDINGS</b></label>
+                 <div><a href="recordings.html" onclick="self.close();"><button type="submit" class="btn">Done</button></a></div>
+                 <div class="date-word-arbabet-diagnosis">
+                    <label>Date</label>  
+                    <label>Word</label>  
+                    <label>Arbabet</label> 
+                    <label>Diagnosis</label>
+                </div>
+                <hr class="h">
+                                
+                            
+                                <audio controls loop>
+                                <source src="An_address_by_Opposition_Leader_Anthony_Albanese.ogg.mp3" type="audio/mp3">
+                                </audio> 
+                                <div  class="dwad">
+                                    <div class="exisitng-input"><input type="text" placeholder="Enter date" required>
+                                    <input type="text" placeholder="Enter word" required>
+                                   <input type="text" placeholder="Enter arbabet" required> </div>
+
+                                   <div><button type="submit" class="add">Add More+</button>
+                                  
+                                        <div class="inp-group">
+
+                                        </div>
+                                    </div>
+                                </div>
+                             
+                             <hr class="h1">
+
+                              
+                               <audio controls loop>
+                               <source src="Audiodescrição_obra_Retrato_de_Francisco_de_Paula_Camargo.wav.mp3" type="audio/mp3">
+                               </audio>
+                                  <div class="dwad1">
+                                    <div class="exisitng-input1"> <input type="text" placeholder="Enter date" required>
+                                        <input type="text" placeholder="Enter word" required>
+                                       <input type="text" placeholder="Enter arbabet" required> </div>
+                                        <div><button type="submit" class="add1">Add More+</button>
+                                  
+                                            <div class="inp-group1">
+        
+                                            </div>
+                                        </div>
+                              </div>
+                              <hr class="h2">
+                              
+                                <audio controls loop>
+                               <source src="Bryan_-_The_Ideal_Republic.ogg.mp3" type="audio/mp3">
+                               </audio>
+                                        <div class="dwad2">
+                                            <div class="exisitng-input2"> <input type="text" placeholder="Enter date" required>
+                                                <input type="text" placeholder="Enter word" required>
+                                               <input type="text" placeholder="Enter arbabet" required></div>
+                                            <div><button type="submit" class="add2">Add More+</button>
+                                  
+                                                <div class="inp-group2">
+            
+                                                </div>
+                                            </div>
+                                        </div>
+                              
+
+                              <hr class="h3">
+                              
+                                <audio controls loop>
+                               <source src="Debate-presidencial-peru2006-parte6.ogg.mp3" type="audio/mp3">
+                               </audio>
+                            
+
+                            <hr class="h4">
+                            
+                                <audio controls loop>
+                               <source src="Harry_S._Truman_1948_Victory_speech.ogg.mp3" type="audio/mp3">
+                               </audio>
+                            
+
+                            <hr class="h5">
+                            
+                                <audio controls loop>
+                                    <source src="American's_Choice_and_Opportunity_(Newton_D._Baker).ogg.mp3" type="audio/mp3">
+                                 </audio>
+                          
+
+                         
+
+
+                              
+           
+
+
+           </div>
+           
+        </main>
+
+    </div>
+    
+
+
+    <script type="text/javascript">
+        function updateClock(){
+            var now = new Date();
+            var dname = now.getDay(),
+            mo = now.getMonth(),
+            dnum = now.getDate(),
+            yr = now.getFullYear(),
+            hou = now.getHours(),
+            min = now.getMinutes(),
+            sec = now.getSeconds(),
+            pe = "AM";
+
+            if(hou == 0){
+                hou = 12;
+            }
+            if(hou > 12){
+                hou = hou - 12;
+                pe = "PM";
+            }
+
+            Number.prototype.pad =  function(digits){
+                for (var n = this.toString(); n.length < digits; n = 0 + n);
+                return n;
+            }
+
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satueday"];
+            var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", 'period'];
+            var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+            for (var i = 0; i < ids.length; i++)
+            document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+        }
+
+        function initClock(){
+            updateClock();
+            window.setInterval("updateClock()", 1);
+        }
+    </script>
+
+<script src="recordings.js"></script>
+
+  
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+     
+</body>
+</html>

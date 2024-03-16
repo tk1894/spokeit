@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesignup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sign up</title>
+</head>
+
+<body>
+    <div class="Container">
+        <form action="signup1.html" method="GET" name="form" onsubmit="return validated()">
+            <h2> Sign up</h2>
+            <div class="content">
+                <div class="input-box">
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="Enter full name" name="name" required>
+                </div>
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter username" name="uname" required>
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input autocomplete="off"  type="email" id="email_error" placeholder="Enter your valid email address" name="email" required>
+                </div>
+                <div class="input-box">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" placeholder="Enter phone number" name="phone" required>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="pass_error" placeholder="Enter new password" name="password" required>
+                </div>
+                <div class="input-box">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" placeholder="Confirm your password" name="confirmPassword" required>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="submit" onclick="validated()">Confirm</button>
+            </div>
+            <script>
+                const form1 = document.querySelector('#form');
+                const unameInput = document.querySelector('#uname');
+                const emailaddress = document.querySelector['#email'];
+                const phoneNo = document.querySelector['#phone'];
+                const passwordInput = document.querySelector['p#assword'];
+                const confirmPassword = document.querySelector['#confirmPassword'];
+        
+                form.addEventListener('submit',(event)=>{
+                    //event.preventDefault();
+        
+                    validated();
+        
+                });
+        
+                function validated(){
+                    if (unameInput.value.trim().length<5 || unameInput.value.trim().length>15){
+                        setError(unameInput, 'Name must be min 5 and max 15 characters');
+                    }
+                    if (isEmailValid(emailaddress.value)) false
+                    {
+                        setError(emailaddress, 'Provide valide email address');
+
+                    }
+                    if (passwordInput.value.trim().length<6 || passwordInput.value.trim().length>20){
+                        setError(passwordInput, 'Password must be min 6 and max 20 characters');
+                    }
+                    if (confirmPassword.value != passwordInput.value){
+                        setError(confirmPassword, 'Password does not match');
+                    }
+                    
+                }
+        
+        
+                    function setError(element, errorMessage){
+                        const parent = element.parentElement;
+                        parent.classList.add('error');
+                        const paragraph = parent.querySelector('p');
+                        paragraph.textContent = errorMessage;
+        
+                    }
+
+                    function isEmailValid(email){
+                        const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                        return reg.test(email);
+                    }
+        
+        
+                
+        
+            </script>
+        </form>
+    </div>
+</body>
+
+
+</html>

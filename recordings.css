@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: left;
+    justify-content: center;
+    align-items: center;
+    
+    background: url('Sidebar.png') no-repeat;
+    background-size: left;
+    background-position: relative;
+    
+}
+
+.sidebar {
+    margin: 230px;
+    margin-left: -5px;
+    width: 200px;
+    background: rgb(16, 16, 33);
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 0px;
+    height: 150px;
+    line-height: 25px;
+}
+
+
+.sidebar .dash-board 
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.sidebar .i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.dash-board label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.dash-board a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dash-board a:hover {
+    text-decoration: underline;
+}
+
+.profile label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.profile a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+.chat label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.chat a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.chat a:hover {
+    text-decoration: underline;
+}
+
+
+.Sidebar {
+    margin: 230px;
+    margin-left: -5px;
+    width: 200px;
+    background: rgb(16, 16, 33);
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 0px;
+    
+}
+.help label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.help a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.help a:hover {
+    text-decoration: underline;
+}
+
+.logout label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.logout a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logout a:hover {
+    text-decoration: underline;
+}
+
+body {
+    display: right;
+    justify-content: center;
+    align-items: center;
+    background-size: right;
+    background-position: relative;
+    background-color: #09495b;
+}
+
+.input-box input {
+    font-size: 16px;
+    color: #161414;
+    padding: 1rem;
+    position: absolute;
+    top: 10px;
+    left: 250px;
+    border-color: aqua;
+    width: 30%;
+}
+
+.input-box input::placeholder {
+    color: rgb(2, 1, 1);
+}
+
+.input-box j {
+    font-size: 20px;
+    color: #161414;
+    padding: 1rem;
+    position: absolute;
+    top: 13px;
+    left: 630px;
+    display: inline;
+}
+
+
+.datetime{
+    color: #fff;
+    background: #7bbacc;
+    font-family: "Segoe UI", sans-serif;
+    width: 340px;
+    padding: 15px 10px;
+    border: 3px solid #2E94E3;
+    border-radius: 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shodow;
+    position: absolute;
+    top: 5px;
+    left: 710px;
+    border-color: aqua;
+    width: 15%;
+    height: 9.5%;
+}
+
+/*.datetime:hover{
+    background: #2E94E3;
+    box-shadow: 0 0 30px #2E94E3;
+}*/
+
+.date{
+    font-size: 10px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.time{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span:not(:last-child){
+    position: relative;
+    margin: 0 6px;
+    font-weight: 300;
+    text-align: center;
+    
+}
+
+.time span:last-child{
+    background: #2E94E3;
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+
+.input-box i {
+    font-size: 40px;
+    color: #060606;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 1400px;
+    width: 90px;
+}
+
+.Ellipse17 {
+    position: absolute;
+    top: 0;
+    font-size: 40px;
+    padding: 1rem;
+    left: 1500px;
+    width: 90px;
+}
+
+.patients {
+    position: absolute;
+    top: 60px;
+    font-size: 25px;
+    padding: 1rem;
+    left: 225px;
+    color: #080a0a
+}
+.patients li{
+    float: left;
+    position: relative;
+    width: auto;
+    color: #060606;
+}
+
+.patients a {
+    color: #060706;
+    text-decoration: none;
+    display: block;
+    padding: 1px 5px;
+    font-size: 20px;
+    transition: all 0.25s ease;
+}
+
+.patients li:hover a{
+    background: #96b2ce;
+}
+#submenu{
+    opacity: 0;
+    position: relative;
+    visibility: hidden;
+}
+
+li:hover ul#submenu{
+    opacity: 1;
+    visibility: visible;
+}
+#submenu li{
+    float: none;
+    width: 100%;
+}
+
+#submenu a:hover{
+    background: #96b2ce;
+}
+#submenu a{
+    background-color: #365b80;
+}
+
+/*-----------------MAIN-----------------*/
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+}
+
+
+.wrapper {
+    
+    gap: 20px;
+    margin: 20px;
+    background: #09495b;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    padding: 5px 5px;
+    position: absolute;
+    top: 130px;
+    left: 250px;
+    width: 1320px;
+    height: 900px;
+    background-color: #fff;
+}
+
+.wrapper > input {
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 1rem;
+    text-decoration: underline;
+    color: black
+}
+
+
+
+.main-container .btn 
+{
+    
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    top: 30px;
+    left: 1200px;
+}
+
+.wrapper .date-word-arbabet-diagnosis 
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    position:relative;
+    top: 30px;
+    left: 50px;
+    padding: 0.2rem;
+    
+    
+}
+
+
+.date-word-arbabet-diagnosis Input {
+
+    accent-color: black;
+    margin-right: 2px;
+    
+}
+
+.h{
+    width: 97%;
+    height: 2px;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 27px;
+    background-color: grey;
+    
+}
+
+audio {
+    padding: 35px;
+    left: auto;
+    margin-right: 2px;
+}
+
+.h1{
+    width: 97%;
+    height: 2px;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    background-color: grey;
+    
+}
+
+.h2{
+    width: 97%;
+    height: 2px;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    background-color: grey;
+    
+}
+
+.h3{
+    width: 97%;
+    height: 2px;
+    border:  none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+    background-color: grey;
+    
+}
+
+.h4{
+    width: 97%;
+    height: 2px;
+    border:  none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    background-color: grey;
+    
+}
+
+.h5{
+    width: 97%;
+    height: 2px;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    background-color: grey;
+    
+}
+
+.wrapper .dwad 
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    position:absolute;
+    top: 120px;
+    left: 150px;
+    padding: 2rem;
+    gap: 220px;   
+    flex-direction: row;
+
+}
+
+.wrapper .dwad1 
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    position:absolute;
+    top: 250px;
+    left: 150px;
+    padding: 2rem;
+    gap: 220px;
+}
+
+.wrapper .dwad2
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    position:absolute;
+    top: 400px;
+    left: 155px;
+    padding: 2rem;
+    gap: 220px;
+}
+
+.exisitng-input{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    padding: 2rem;
+    gap: 220px;   
+    
+
+}
+
+.exisitng-input1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    position:absolute;
+    top: 10px;
+    left: 0px;
+    padding: 2rem;
+    gap: 220px;   
+
+}
+
+.exisitng-input2{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    position:absolute;
+    top: 6px;
+    left: 0px;
+    padding: 2rem;
+    gap: 220px;   
+
+}
+
+  
+  .add {
+    margin-bottom: 10px;
+    background-color: #898d91;
+    border-radius: 10px;
+    position:absolute;
+    top: 25px;
+    left: 1000px;
+    width: 100px;
+  }
+
+  .add1 {
+    margin-bottom: 10px;
+    background-color: #898d91;
+    border-radius: 10px;
+    position:absolute;
+    top: 40px;
+    left: 1000px;
+    width: 100px;
+  }
+
+  .add2 {
+    margin-bottom: 10px;
+    background-color: #898d91;
+    border-radius: 10px;
+    position:absolute;
+    top: 40px;
+    left: 1000px;
+    width: 100px;
+  }
+
+  .inp-group {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position:absolute;
+    top: 50px;
+    left: 970px;
+  }
+
+
+  .inp-group1 {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position:absolute;
+    top: 70px;
+    left: 970px;
+  }
+
+  .inp-group2 {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position:absolute;
+    top:70px;
+    left: 970px;
+  }
+ 
+
+  
+ 
+
+
+
+
+
+
+
+
+/* Dynamic Class Creation  */
+
+.flex{
+
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 5px;
+}
+
+.flex1{
+
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 5px;
+}
+
+.flex2{
+
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 5px;
+}
+
+.delete {
+    text-decoration: none;
+    display: inline-block;
+    background: #6c848b;
+    border-radius: 2px;
+    padding: 1px;
+    border: none;
+    height: 20px;
+    cursor: pointer;
+}
+
+.delete1 {
+    text-decoration: none;
+    display: inline-block;
+    background: #6c848b;
+    border-radius: 2px;
+    padding: 1px;
+    border: none;
+    height: 20px;
+    cursor: pointer;
+}
+
+.delete2 {
+    text-decoration: none;
+    display: inline-block;
+    background: #6c848b;
+    border-radius: 2px;
+    padding: 1px;
+    border: none;
+    height: 20px;
+    cursor: pointer;
+}
+
+input{
+    padding: 2px;
+    border: none;
+    width: 100px;
+    background:  #6c848b;
+    border-radius: 5px;
+}
+input:focus{
+    outline: 1px solid #efefef;
+}
+
+
+

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="report.css">
+    <script src="script.js"></script>
+    
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body onload="initClock()">
+    <div class="sidebar">
+        <div class="dash-board">
+            <i class='bx bx-home'></i>
+            <a href="#" class="bold">Dashboard</a>
+        </div>
+        <div class="profile">
+            <i class='bx bxs-user-rectangle'></i>
+            <a href="#" class="bold">Profile</a>
+        </div><br>
+        <div class="chat">
+            <i class='bx bxs-chat'></i>
+            <a href="#" class="bold">Chat</a>
+        </div>
+        <div class="Sidebar">
+            <div class="help">
+                <i class='bx bx-help-circle'></i>
+                <a href="#" class="bold">Help</a>
+            </div><br>
+            <div class="logout">
+                <i class='bx bx-log-out'></i>
+                <a href="#" class="bold">Logout</a>
+            </div>
+        </div>
+    </div>
+        
+    <div class="header">
+            <div class="container">
+                <div class="input-box">
+                    <input type="text" placeholder="search..." required>
+                    <j class='bx bx-search'></j>
+                </div>
+            </div>
+    </div>
+
+    <!-- digital clock start-->
+    <div class="datetime">
+        <div class="date">
+            <span id="dayname">Day</span>,
+            <span id="month">Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+        </div>
+        <div class="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>
+        </div>
+    </div>
+    <div class="input-box">
+        <i class='bx bxs-bell'></i>
+    </div>
+
+    <div class="clinician">
+        <img src="Ellipse17.png" alt="therapist" class="Ellipse17">
+    </div>
+    <nav class="patients">
+        <ul>
+                <li><a href="">Mike Po</a>
+                    <ul id="submenu">
+                        <li><a href="">Reports</a></li>
+                    </ul>
+                </li>
+            
+       </ul>
+    </nav>
+
+    <div class="grid-container">
+        <main class="main-container">
+
+        
+           <label>Reports</label>
+
+           <div class="charts">
+
+
+            <div class="charts-card">
+                <a href="frame6.html" onclick="self.close();"><p class="chart-title">Playtime</p></a>
+                <div id="line-chart"></div>
+            </div>
+
+
+            <div class="charts-card">
+                <p class="chart-title">Percentage Correct Speech</p>
+                <div id="pie-chart"></div>
+                <span>57%</span>
+            </div>
+
+            <div class="charts-card">
+                <p class="chart-title">Speech Error rates</p>
+                <div id="line1-chart"></div>
+            </div>
+
+           </div>
+
+        </main>
+
+    </div>
+    
+
+
+    <script type="text/javascript">
+        function updateClock(){
+            var now = new Date();
+            var dname = now.getDay(),
+            mo = now.getMonth(),
+            dnum = now.getDate(),
+            yr = now.getFullYear(),
+            hou = now.getHours(),
+            min = now.getMinutes(),
+            sec = now.getSeconds(),
+            pe = "AM";
+
+            if(hou == 0){
+                hou = 12;
+            }
+            if(hou > 12){
+                hou = hou - 12;
+                pe = "PM";
+            }
+
+            Number.prototype.pad =  function(digits){
+                for (var n = this.toString(); n.length < digits; n = 0 + n);
+                return n;
+            }
+
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satueday"];
+            var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", 'period'];
+            var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+            for (var i = 0; i < ids.length; i++)
+            document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+        }
+
+        function initClock(){
+            updateClock();
+            window.setInterval("updateClock()", 1);
+        }
+    </script>
+
+    <!-- Scripts-->
+    <!--ApexCharts-->
+    <!--line Chart-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.46.0/apexcharts.min.js"></script>
+    <script>
+        var lineChartoptions = {
+          series: [{
+            name: "Playtime",
+            data: [22, 49, 35, 32, 22]
+        }],
+          chart: {
+          height: 350,
+          type: 'line',
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'straight'
+        },
+        title: {
+          text: '',
+          align: 'left'
+        },
+        grid: {
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        xaxis: {
+          categories: ['1', '2', '3', '4', '5', ''],
+        }
+        };
+
+        var lineChart = new ApexCharts(document.querySelector("#line-chart"), lineChartoptions);
+        lineChart.render();
+      
+      
+    
+    </script>
+    <script>
+        var line1Chartoptions = {
+          series: [{
+            name: "Speech Error Rates",
+            data: [58, 56, 54, 61, 63, 65, 64, 61, 63, 69, 80, 90]
+        }],
+          chart: {
+          height: 200,
+          type: 'line',
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'straight'
+        },
+        title: {
+          text: '',
+          align: 'left'
+        },
+        grid: {
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        }
+        };
+
+        var line1Chart = new ApexCharts(document.querySelector("#line1-chart"), line1Chartoptions);
+        line1Chart.render();
+      
+      
+    
+    </script>
+</body>
+</html>
